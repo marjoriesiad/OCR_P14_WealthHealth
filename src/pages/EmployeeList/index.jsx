@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import { selectEmployee } from "../../service/employeeSlice.js";
 import DataTable from "react-data-table-component";
 import FilterComponent from "react-data-table-component";
-import { Link } from "react-router-dom";
 import mockedEmployees from "../../data/employees.js";
 import { useState, useMemo } from "react";
 import "./employeeList.css";
@@ -15,7 +14,7 @@ const EmployeeList = () => {
   const employees = useSelector(selectEmployee);
 
   //changer par "mockedEmployee" pour avoir une plus grande liste
-  const datas = mockedEmployees;
+  const datas = employees;
   const [filterText, setFilterText] = useState("");
   const onFilter = (e) => setFilterText(e.target.value);
   const [resetPagination, setResetPagination] = useState(false);
