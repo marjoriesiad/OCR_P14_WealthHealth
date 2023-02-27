@@ -6,6 +6,7 @@ import Modal from "../Modal/index.jsx";
 import Select from "../Select";
 import "./form.css";
 
+// Nom et Prénom dans la modale
 let first = "";
 let last = "";
 
@@ -30,6 +31,7 @@ const Form = () => {
     setFirstName(e.target.value);
     setDisplayModal(false);
   };
+
   const onLastNameChange = (e) => setLastName(e.target.value);
   const onStartDateChange = (e) => setStartDate(e.target.value);
   const onDepartmentChange = (e) => setDepartment(e.target.value);
@@ -57,6 +59,7 @@ const Form = () => {
       return false;
     }
 
+    // Envoi le nouvel état au reducer qui le transmet au store
     dispatch(
       addUser({
         firstName: firstName,
@@ -71,7 +74,7 @@ const Form = () => {
       })
     );
 
-    // Saving names for modal display
+    // Sauvegarde les nom/prénom pour la modale
     first = firstName;
     last = lastName;
     setDisplayModal(true);
