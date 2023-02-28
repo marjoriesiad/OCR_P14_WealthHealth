@@ -15,7 +15,7 @@
 - [React-datepicker](https://www.npmjs.com/package/react-datepicker)
 
 --- 
-### Installing and launching the front-end
+### Installing and launching
 - Clone the [repository](https://github.com/marjoriesiad/OCR_P14_WealthHealth)
 - Install the dependencies with `npm install`
 - Launch the project with `npm start`
